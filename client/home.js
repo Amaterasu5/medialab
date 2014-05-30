@@ -1,19 +1,38 @@
 $(document).ready(function(){
-  //$('#video_area').click(function(){
-  // $('#video_area').addClass('fade');
-  // $('#video').toggleClass('hidden');
-  //});
+  var inPlayButton = false;
+  $('#text').mouseenter(function(){
+    text_mouseenter();
+  });
 
-  //$('#background').mouseenter(function(){
-  //	$(this).animate({'opacity':.7},200);
-  //  $(this).text("Watch the Video!");
-	//});
-  //$('#background').mouseleave(function(){
-  //	$(this).animate({'opacity':1},200);
-  //  $(this).text("");
-  //});
+  $('#text').mouseleave(function(){
+    if (!inPlayButton){
+      $('#text_container').removeClass('hidden');
+      $('#playButton').addClass('hidden');
+    }
+  });
 
-  $('.playButton').click(function(){
+  var text_mouseenter = function(){
+    $('#text_container').addClass('hidden');
+    $('#playButton').removeClass('hidden');
+  }
+
+  $('#playButton').mouseenter(function(){
+    inPlayButton=true;
+    //('#text').addClass('clickthru');
+  });
+
+  $('#playButton').mouseleave(function(){
+    inPlayButton=false;
+    $('#text_container').removeClass('hidden');
+    $('#playButton').addClass('hidden');
+    $('#text').unbind('mouseenter');
+    setTimeout(function(){
+      $('#text').mouseenter(function(){
+        text_mouseenter();
+      })},100);
+  });
+
+  $('#playButton').click(function(){
     $(this).addClass('hidden');
     $('#video').removeClass('hidden');
     $('#video_area').addClass('fade',500);
