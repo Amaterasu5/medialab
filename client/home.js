@@ -1,14 +1,11 @@
 $(document).ready(function(){
-  var inPlayButton = false;
-  $('#text').mouseenter(function(){
+  $('#select_area').mouseenter(function(){
     text_mouseenter();
   });
 
-  $('#text').mouseleave(function(){
-    if (!inPlayButton){
-      $('#text_container').removeClass('hidden');
-      $('#playButton').addClass('hidden');
-    }
+  $('#select_area').mouseleave(function(){
+    $('#text_container').removeClass('hidden');
+    $('#playButton').addClass('hidden');
   });
 
   var text_mouseenter = function(){
@@ -16,26 +13,25 @@ $(document).ready(function(){
     $('#playButton').removeClass('hidden');
   }
 
-  $('#playButton').mouseenter(function(){
-    inPlayButton=true;
+  $('#select_area').mouseenter(function(){
     //('#text').addClass('clickthru');
   });
 
-  $('#playButton').mouseleave(function(){
-    inPlayButton=false;
-    $('#text_container').removeClass('hidden');
-    $('#playButton').addClass('hidden');
-    $('#text').unbind('mouseenter');
-    setTimeout(function(){
-      $('#text').mouseenter(function(){
-        text_mouseenter();
-      })},100);
-  });
+  // $('#select_area').mouseleave(function(){
+  //   $('#text_container').removeClass('hidden');
+  //   $('#playButton').addClass('hidden');
+  //   $('#text').unbind('mouseenter');
+  //   setTimeout(function(){
+  //     $('#text').mouseenter(function(){
+  //       text_mouseenter();
+  //     })},100);
+  // });
 
-  $('#playButton').click(function(){
-    $(this).addClass('hidden');
+  $('#select_area').click(function(){
+    $('#playButton').addClass('hidden');
     $('#video').removeClass('hidden');
     $('#video_area').addClass('fade',500);
+    $('#video').attr('src','http://www.youtube.com/embed/cUC_rzsiua8?autoplay=1');
   });
 
   setInterval(function(){

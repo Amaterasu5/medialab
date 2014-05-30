@@ -88,7 +88,6 @@ div>a>img {
  	letter-spacing: 4.5px;
  	-webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.009);
-    z-index: 4;
 }
 
 #text_container {
@@ -105,11 +104,19 @@ div>a>img {
 	letter-spacing: 18px;
 }
 
+#select_area{
+	position: absolute;
+	top:33%;
+  	left:38%;
+  	width: 25%;
+  	height: 30%;
+  	z-index: 2;
+}
+
 #playButton{
   position:absolute;
-  top:40%;
-  left:48%;
-   
+  top:37%;
+  left:47%;
 }
 
 #background {
