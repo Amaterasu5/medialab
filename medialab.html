@@ -1,8 +1,14 @@
 <head>
   <title>MediaLab</title>
+  <script type="text/javascript">var __tcaExcludeHostedCss=true;</script>
+  <script type="text/javascript" src="http://typecast.com/project_css/YwBbfv7jjR/2044549ec476dc.js"></script>        
+  <link rel="stylesheet" type="text/css" href="/style.css" media="all">
 </head>
 
 <body>
+
+  <!-- Navbar -->
+
   <div id='navbar2'>
     <div class='icons'>
       <span class="subicons">
@@ -10,7 +16,7 @@
         <a><img src='/twitter-logo.png'></a>
         <a><img src='/email-logo.png'></a>
       </span>
-      <a>ABOUT<img src='/about-logo.png'></a>
+      <a class="simple-menu" href="#sidr">ABOUT<img src='/about-logo.png'></a>
     </div>
   </div>
   <div id='navbar'>
@@ -22,10 +28,20 @@
         <a><img src='/twitter-logo.png'></a>
         <a><img src='/email-logo.png'></a>
       </span>
-      <a>ABOUT<img src='/about-logo.png'></a>
+      <a class="simple-menu" href="#sidr">ABOUT<img src='/about-logo.png'></a>
     </div>
   </div>
-  <!-- {{> hello}} -->
+
+  <div id="sidr">
+  <!-- Your content -->
+    <p>
+      MATERIAL I/O is part of a bigger vision of Radical Atom from <span>Tangible Media Group</span> led by <span>Hiroshi Ishii</span>.<br><br>
+      Web Design Concept<br><span>Lining Yao</span><br>Research Concept<br><span>Lining Yao, Jifei Ou</span><br>Major Research Collaborators<br><span>Ryuma Niiyama, Wen (Eve) Wang</span><br>Web Development<br><span>Andre Mroz, Lining Yao, Shuang Yin</span>
+    </p>
+  </div>
+  
+  <!-- "First Page - Video" -->
+
   	<div id='video_area'>
       <div id='black_layer'>
         <div id='text'>
@@ -37,20 +53,19 @@
     </div>
       <img id="playButton" class= "hidden" src="/Polygon-1.png">
       <div id='select_area'></div>
-      <iframe id='video' class='hidden' src='http://www.youtube.com/embed/cUC_rzsiua8'  frameborder="0"></iframe>
+      <iframe id='video' class='hidden' frameborder="0"></iframe>
+      <img id='close_button' class='hidden' src='/close.png'>
+
+  <!-- "Second Page - Text" -->
+
 		<div id='section_two'>
-      <!-- <div id='background'>
-        <img class='background' src='/001.png'>
-        <img class='background' src='/002.png'>
-        <img class='background' src='/003.png'>
-        <img class='background' src='/004.png'>
-      </div> -->
-
+      <div id="page2_text">
+        <p>I/O MATERIAL is our statement of future computing. We call ourselves "atom hackers". When computing jumps out of computer screens and moves into physical environment, it's next home is matter. By designng material across nano, micro and macro scales, by integrating material live or dead, and by engineering material sensing and representing, we are creating a future with responsive furnitures, living rooms, vehicles and air planes.<br><br>Through this site, we hope to share our projects, methods and philosophy with you.<br><br> This is a part of a bigger effort of pursuing physical manifestation of digital information at Tangible Media Group, MIT Media Lab. We call this vision Radical Atom.</p>
+      </div>
+      <div id='section_two_gradient'>
+      </div>
     </div>
-</body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
-</template>
+  <!-- "Third Page - Photos" -->
+
+</body>
