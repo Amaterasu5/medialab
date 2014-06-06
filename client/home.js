@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+  $('#photo_container').css({
+    'top':$(document).height()-window.innerHeight
+  });
+
   //Event handlers
 
   $('#select_area').mouseenter(function(){
@@ -54,29 +58,26 @@ $(document).ready(function(){
 
   //From grayscale to color
 
-  setInterval(function(){
-    var curr_scroll=$(window).scrollTop();
-    if (curr_scroll>=window.innerHeight*1.3){
-      if (curr_scroll>=window.innerHeight*1.6){
-        $('#section_two').css({
-          '-moz-filter':'none',
-          '-o-filter':'none',
-          '-webkit-filter':'none',
-          'filter':'none'
-        });
-      }else{
-        $('#section_two').css({
-          '-moz-filter':'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")',
-          '-o-filter':'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")',
-          '-webkit-filter':'grayscale(100%)',
-          'filter':'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")'
-      });
-      }
-      var range = $(document).height()-window.innerHeight*2.6;
-      var opacity = Math.min((curr_scroll-window.innerHeight*1.3)/range,1);
-      $('#section_two_gradient').css('opacity',opacity);
-    }
-  },5);
+  // setInterval(function(){
+  //   var curr_scroll=$(window).scrollTop();
+  //   if (curr_scroll>=$(document).height()-window.innerHeight*1.3){
+  //     if (curr_scroll>=$(document).height()-window.innerHeight){
+  //       $('#section_two').css({
+  //         '-moz-filter':'none',
+  //         '-o-filter':'none',
+  //         '-webkit-filter':'none',
+  //         'filter':'none'
+  //       });
+  //     }else{
+  //       $('#section_two').css({
+  //         '-moz-filter':'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")',
+  //         '-o-filter':'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")',
+  //         '-webkit-filter':'grayscale(100%)',
+  //         'filter':'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")'
+  //     });
+  //     }
+  //   }
+  // },5);
 
   //Responsive Sidr Menu
 
@@ -87,8 +88,7 @@ $(document).ready(function(){
       $('#navbar').animate({'width':$('#navbar').width() - $("#sidr").width()},200);
       $('#video_area').animate({'width':$('#video_area').width() - $("#sidr").width()},200);
       $('#section_two').animate({'width':$('#section_two').width() - $("#sidr").width()},200);
-      $('#playButton').css('left','34%');
-      $('#playButton').css('top','40%');
+      $('#playButton').css('left','35%');
       $('#select_area').css('left','25%');
       $('#select_area').css('top','36%');
     },
@@ -98,16 +98,20 @@ $(document).ready(function(){
       $('#video_area').animate({'width':$('#video_area').width() + $("#sidr").width()},200);
       $('#section_two').animate({'width':$('#section_two').width() + $("#sidr").width()},200);
       $('#playButton').css('left','47%');
-      $('#playButton').css('top','37%');
       $('#select_area').css('left','38%');
       $('#select_area').css('top','33%');
     }
   });
 
-  //Sidr bug onresize - just close it
 
   window.onresize = function(){
+    //Sidr bug onresize - just close it
     jQuery.sidr('close');
+
+    $('#photo_container').css({
+      'top':$(document).height()-window.innerHeight
+    });
   }
 
+  
 });

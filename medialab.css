@@ -6,8 +6,8 @@ body {
 	font-size: 50pt;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
-	height:281vh;
-	width: 100vw;
+	height:230%;
+	width: 100%;
 }
 
 #navbar {
@@ -96,8 +96,8 @@ div>a>img {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	font-size: 11pt;
 	font-weight: 200;
 }
@@ -169,8 +169,8 @@ div>a>img {
 
 .background {
 	display: inline-block;
-	width: 50vw;
-	height: 50vh;
+	width: 50%;
+	height: 50%;
 	float: left;
 }
 
@@ -181,21 +181,16 @@ div>a>img {
 }
 
 .hidden {
-	display: none;
-}
-
-.fade {
-	opacity:1;
-	background-color: black !important;
+	display: none !important;
 }
 
 #video {
 	position: absolute;
 	z-index: 3;
-	width: 83vw;
-	height: 87vh;
-	top: 6vh;
-	left: 13vh;
+	width: 83%;
+	height: 87%;
+	top: 6%;
+	left: 9%;
 	border-style: solid;
 	border-width: 5px;
 	border-color: white;
@@ -205,7 +200,7 @@ div>a>img {
 #close_button {
 	position: absolute;
 	top: 9px;
-	right: 6.5vh;
+	right: 4%;
 	width: 30px;
 	height: 30px;
 }
@@ -219,40 +214,62 @@ div>a>img {
 	color: black;
 	position: absolute;
 	top: 100%;
-	width: 100vw;
-	height: 200vh;
+	width: 100%;
+	height: 200%;
 	margin-top: 0px;
 	margin-left: -8px;
 	background: url(/001.png), url(/002.png),url(/003.png),url(/004.png);
 	background-position: left top,right top,left bottom, right bottom;
 	background-repeat: no-repeat;
-	background-size: 50vw 51vh;
+	background-size: 50% 51%;
 	background-attachment: fixed;
-	-moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-         -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-         -webkit-filter: grayscale(100%);
-         filter: gray;
-         filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 }
 
-#section_two_gradient {
-	width: 100%;
-	height: 100%;
+#section_two1 {
+	height: 53%;
+	width:100%;
 	background: url(/001.png), url(/002.png),url(/003.png),url(/004.png);
 	background-position: left top,right top,left bottom, right bottom;
 	background-repeat: no-repeat;
-	background-size: 50vw 51vh;
+	background-size: 50% 51%;
 	background-attachment: fixed;
-	z-index: 3;
+	-moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(100%);
+    -ms-filter: gray;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
 }
 
-#section_two:before{
+#section_two1:before{
 	content:"";
     display:block;
     position:absolute;
     width:100%;
-    height:100%;
+    height: 70%;
     z-index:-1;
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+#photo_container{
+	position: absolute;
+	left: 0px;
+}
+
+.image{
+	line-height: 49%;
+	font-size: 14pt;
+	font-family: "Open Sans", sans-serif;
+	color: white;
+	opacity: 0;
+	width: 50%;
+	height: 49%;
+	background-color: black;
+	display: inline-block;
+	float: left;
+}
+
+.image:hover{
+	opacity:.4;
+	z-index: 4;
 }
 
