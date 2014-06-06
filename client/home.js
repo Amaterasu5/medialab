@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-  $('#photo_container').css({
-    'top':$(document).height()-window.innerHeight
-  });
+  //$('#photo_container').css({
+  //  'top':$(document).height()-window.innerHeight
+  //});
 
   //Event handlers
 
@@ -56,29 +56,6 @@ $(document).ready(function(){
     }
   },50);
 
-  //From grayscale to color
-
-  // setInterval(function(){
-  //   var curr_scroll=$(window).scrollTop();
-  //   if (curr_scroll>=$(document).height()-window.innerHeight*1.3){
-  //     if (curr_scroll>=$(document).height()-window.innerHeight){
-  //       $('#section_two').css({
-  //         '-moz-filter':'none',
-  //         '-o-filter':'none',
-  //         '-webkit-filter':'none',
-  //         'filter':'none'
-  //       });
-  //     }else{
-  //       $('#section_two').css({
-  //         '-moz-filter':'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")',
-  //         '-o-filter':'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")',
-  //         '-webkit-filter':'grayscale(100%)',
-  //         'filter':'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")'
-  //     });
-  //     }
-  //   }
-  // },5);
-
   //Responsive Sidr Menu
 
   $('.simple-menu').sidr({
@@ -108,9 +85,9 @@ $(document).ready(function(){
     //Sidr bug onresize - just close it
     jQuery.sidr('close');
 
-    $('#photo_container').css({
-      'top':$(document).height()-window.innerHeight
-    });
+    //$('#photo_container').css({
+    //  'top':$(document).height()-window.innerHeight
+    //});
   }
 
   
