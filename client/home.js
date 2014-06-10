@@ -81,14 +81,10 @@ $(document).ready(function(){
   });
 
 
-  window.onresize = function(){
+  $(window).resize(function(){
     //Sidr bug onresize - just close it
     jQuery.sidr('close');
-
-    //$('#photo_container').css({
-    //  'top':$(document).height()-window.innerHeight
-    //});
-  }
+  });
 
   
 });
