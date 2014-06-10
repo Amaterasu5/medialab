@@ -56,6 +56,13 @@ body {
 	font-size: 11pt;
 }
 
+#arrow {
+	z-index: 15;
+	position: absolute;
+	top: 90%;
+	left: 49.6%;
+}
+
 .fade {
 	opacity:1;
 	background-color: black !important;

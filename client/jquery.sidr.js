@@ -156,7 +156,7 @@
           scrollTop = $html.scrollTop();
           $html.removeAttr('style').scrollTop(scrollTop);
         }
-        $body.addClass('sidr-animating').css('width','100% !important').animate(bodyAnimation, speed).removeClass(bodyClass);
+        $body.addClass('sidr-animating').animate(bodyAnimation, speed).removeClass(bodyClass);
         $menu.animate(menuAnimation, speed, function() {
           $menu.removeAttr('style').hide();
           $body.removeAttr('style');

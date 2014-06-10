@@ -70,13 +70,14 @@ $(document).ready(function(){
       $('#select_area').css('top','36%');
     },
     onClose: function(){
-      $('#navbar2').animate({'width':$('#navbar2').width() + $("#sidr").width()},200);
-      $('#navbar').animate({'width':$('#navbar').width() + $("#sidr").width()},200);
-      $('#video_area').animate({'width':$('#video_area').width() + $("#sidr").width()},200);
-      $('#section_two').animate({'width':$('#section_two').width() + $("#sidr").width()},200);
+      $('#navbar2').animate({'width':'100%'},200);
+      $('#navbar').animate({'width':'100%'},200);
+      $('#video_area').animate({'width':'100%'},200);
+      $('#section_two').animate({'width':'100%'},200);
       $('#playButton').css('left','47%');
       $('#select_area').css('left','38%');
       $('#select_area').css('top','33%');
+      $('body').css('width','100%');
     }
   });
 
