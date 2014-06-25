@@ -6,7 +6,6 @@ body {
 	font-size: 50pt;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
-	height:230%;
 	width: 100%;
 }
 
@@ -15,7 +14,7 @@ body {
 	background-color: white;
 	width: 100%;
 	height: 60px;
-	z-index: 2;
+	z-index: 2000;
 	font-size: 10pt;
 	top: 0;
 	left: 0;
@@ -60,7 +59,7 @@ body {
 	z-index: 15;
 	position: absolute;
 	top: 90%;
-	left: 49.6%;
+	left: 50%;
 }
 
 .fade {
@@ -79,6 +78,12 @@ body {
 	font-size: 10px;
 }
 
+.links {
+	float:left;
+	margin-right: 30px;
+	font-size: 11px;
+}
+
 .subicons {
 	float:left;
 	margin-right: 20px;
@@ -89,7 +94,11 @@ a {
 	color: black;
 }
 
-span>a {
+.links>a{
+	margin-right: 33px;
+}
+
+.subicons>a {
 	margin-right: 10px;
 }
 
@@ -196,6 +205,7 @@ div>a>img {
 
 .hidden {
 	display: none !important;
+	opacity: 0 !important;
 }
 
 #video {
@@ -229,23 +239,18 @@ div>a>img {
 	position: absolute;
 	top: 100%;
 	width: 100%;
-	height: 200%;
+	height: 150%;
 	margin-top: 0px;
 	margin-left: -8px;
-	background: url(/001.png), url(/002.png),url(/003.png),url(/004.png);
-	background-position: left top,right top,left bottom, right bottom;
-	background-repeat: no-repeat;
-	background-size: 50% 51%;
-	background-attachment: fixed;
 }
 
 #section_two1 {
-	height: 53%;
+	height:100%;
 	width:100%;
 	background: url(/001.png), url(/002.png),url(/003.png),url(/004.png);
 	background-position: left top,right top,left bottom, right bottom;
 	background-repeat: no-repeat;
-	background-size: 50% 51%;
+	background-size: 51% 51%;
 	background-attachment: fixed;
 	-moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
     -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
@@ -259,31 +264,48 @@ div>a>img {
     display:block;
     position:absolute;
     width:100%;
-    height: 70%;
+    height: 100%;
     z-index:-1;
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-#photo_container{
+#section_three {
+	top:250%;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	position: absolute;
-	left: 0px;
+	overflow-y: hidden;
 }
 
-.image{
-	line-height: 49%;
-	font-size: 14pt;
-	font-family: "Open Sans", sans-serif;
-	color: white;
-	opacity: 0;
-	width: 50%;
-	height: 49%;
-	background-color: black;
-	display: inline-block;
+.left_column {
+	top: 0%;
 	float: left;
+	margin-left: 8%;
+	width: 28%;
+	height: 100%;
 }
 
-.image:hover{
-	opacity:.4;
-	z-index: 4;
+.middle_column {
+	top: 0%;
+	width: 28%;
+	height: 100%;
+	display: inline-block;
 }
 
+.right_column {
+	top: 0%;
+	float: right;
+	margin-right: 8%;
+	width: 28%;
+	height: 100%;
+}
+
+.column_image {
+	width: 100%;
+	height: 25%;
+}
+
+.gallery {
+	display: none;
+}

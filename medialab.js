@@ -10,6 +10,10 @@ if (Meteor.isClient) {
         console.log("You pressed the button");
     }
   });
+
+  Template.navbar.middle = function(){
+
+  };
 }
 
 if (Meteor.isServer) {
