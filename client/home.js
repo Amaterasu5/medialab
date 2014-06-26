@@ -100,10 +100,30 @@ $(document).ready(function(){
     $('#gallery_text').append('<p style="font-size:8pt;">The transformation of the artificial leaves mimics the transformation of the real organism, yet it is controllable through material programming.</p>');
   });
 
+  $(document).on('click','.gv_panel',function(e){
+    e.preventDefault();
+    $('#section_three').addClass('hidden');
+    $('#main_page_dark').addClass('fade',500);
+    $('#close_button2').removeClass('hidden',500);
+    $('#main_page_dark').append($('.gv_galleryWrap').clone().css({
+      'left':$(document).width()/2-420,
+      'top':'13%'
+    }));
+  });
+
+  $('#close_button2').click(function(){
+    $('#main_page_dark').removeClass('fade',100);
+    $('#close_button2').addClass('hidden');
+    $('#section_three').removeClass('hidden');
+    $('#main_page_dark').empty();
+  });
+
   //Third page carousel
   $('#section_three').owlCarousel({
     singleItem:true,
-    pagination:false
+    pagination:false,
+    mouseDrag:false,
+    touchDrag:false
   });
 
   $owl=$('#section_three').data('owlCarousel');
