@@ -39,12 +39,22 @@ body {
 #sidr>p{
 	color: gray;
 	text-align: left;
-	font-size: 10.2pt;
-	line-height: 18pt;
+	font-size: 3vh;
+	line-height: 4.3vh;
+	position: absolute;
+	top: 10%;
+}
+
+#sidr div{
+	position: absolute;
+	bottom: 3%;
+	right: 6%;
+	text-align: left;
+	font-size: 3vh;
 }
 
 #sidr span {
-	font-size: 10.8pt;
+	font-size: 3vh;
 	color: white;
 }
 
@@ -282,9 +292,10 @@ div>a>img {
 .left_column {
 	margin-top: 8%;
 	float: left;
-	margin-left: 7%;
+	margin-left: 6%;
 	width: 28%;
 	height: 100%;
+	margin-right: .9%;
 }
 
 .middle_column {
@@ -292,12 +303,13 @@ div>a>img {
 	width: 28%;
 	height: 100%;
 	display: inline-block;
+	margin-left: .9%;
 }
 
 .right_column {
 	margin-top: 8%;
 	float: right;
-	margin-right: 7%;
+	margin-right: 6.5%;
 	width: 28%;
 	height: 100%;
 }
