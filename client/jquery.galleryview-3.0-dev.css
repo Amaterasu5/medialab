@@ -11,10 +11,10 @@
 /* IMPORTANT - Change '#myGallery' to the ID of your gallery list to prevent a flash of unstyled content */
 #myGallery { display: none; }
 
-.gv_galleryWrap { position: relative; background: #222; font-size: 10pt;}
+.gv_galleryWrap { position: relative; background: #222; font-size: 10pt; margin-left: 15%;}
 
 /* GALLERY DIV */
-.gv_gallery { overflow: hidden; position: relative;}
+.gv_gallery { overflow: hidden; position: relative; width: 65%; height: 38%;}
 
 .gv_imageStore { visibility: hidden; position: absolute; top: -10000px; left: -10000px; }
 

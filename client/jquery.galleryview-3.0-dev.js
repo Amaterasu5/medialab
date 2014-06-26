@@ -986,8 +986,12 @@ if (typeof Object.create !== 'function') {
 			}
 			
 			//swap out source element with gallery
-			$('#gallery_area').replaceWith(dom.gv_galleryWrap);
-			
+			if ($('#gallery_area')[0]!=undefined){
+				$('#gallery_area').replaceWith(dom.gv_galleryWrap);
+			}else{
+				$('.gv_galleryWrap').replaceWith(dom.gv_galleryWrap);
+			}
+
 			if(this.opts.pan_images) {
 				this.enablePanning();
 			}

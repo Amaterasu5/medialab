@@ -48,7 +48,7 @@ $(document).ready(function(){
     }else if ($(window).scrollTop()>=window.innerHeight-60){
       $("#navbar").slideDown('normal');
     }
-    if ($(window).scrollTop()>=2*(window.innerHeight+100)){
+    if ($(window).scrollTop()>=2*(window.innerHeight+90)){
       $('.subicons').hide('fast');
       $('.links').show('normal');
     }else{
