@@ -39,8 +39,8 @@ body {
 #sidr>p{
 	color: gray;
 	text-align: left;
-	font-size: 3vh;
-	line-height: 4.3vh;
+	font-size: 2vh;
+	line-height: 3.4vh;
 	position: absolute;
 	top: 10%;
 }
@@ -50,11 +50,11 @@ body {
 	bottom: 3%;
 	right: 6%;
 	text-align: left;
-	font-size: 3vh;
+	font-size: 2vh;
 }
 
 #sidr span {
-	font-size: 3vh;
+	font-size: 2vh;
 	color: white;
 }
 
