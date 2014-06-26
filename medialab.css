@@ -310,13 +310,20 @@ div>a>img {
 	display: none;
 }
 
+#gallery_text {
+	position: absolute;
+	top: 48px;
+	font-size: 8pt;
+	width: 300px;
+}
+
 .img_text_top {
-	margin-top: -22px;
+	margin-top: -20px;
 	font-size: 14pt;
 }
 
 .img_text_bottom {
-	margin-top: -30px;
+	margin-top: -28px;
 	font-size: 8pt;
 	line-height: 17px;
 }
