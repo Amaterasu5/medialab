@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-  $('*').animate({opacity:1},1800);
-
   //Event handlers
 
   $('#select_area').mouseenter(function(){
@@ -39,6 +37,11 @@ $(document).ready(function(){
   }
 
     $('.email').attr('href','mailto:?subject=Check out this awesome project!&body='+window.location.href);
+
+    $('.sign_in').click(function(){
+      $('.fade2').removeClass('hidden',100);
+      $('#login_form').removeClass('hidden',100);
+    });
 
   //Navbar dropdown
 

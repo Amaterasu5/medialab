@@ -17,6 +17,7 @@
   <div id='navbar2'>
     <div class='icons'>
       <span class="subicons">
+        <a class='sign_in'>SIGN IN</a>
         <a><img src='/facebook-logo.png'></a>
         <a><img src='/twitter-logo.png'></a>
         <a class='email'><img src='/email-logo.png'></a>
@@ -31,14 +32,23 @@
       <span class="links">
         <a href='#section_three' id='slide_2'>MATERIAL FABRICATION</a>
         <a href='#section_three' id='slide_3'>ACTIVITIES</a>
+        <a class='sign_in'>SIGN IN</a>
       </span>
       <span class="subicons">
-        <a><img src='/facebook-logo.png'></a>
+        <a class='sign_in'>SIGN IN</a>
+        <a class='fb'><img src='/facebook-logo.png'></a>
         <a><img src='/twitter-logo.png'></a>
         <a class='email'><img src='/email-logo.png'></a>
       </span>
       <a class="simple-menu" href="#sidr">ABOUT<img src='/about-logo.png'></a>
     </div>
+  </div>
+
+  <div class='fade2 hidden'>
+    {{#unless Meteor.userId}}
+      {{> login}}
+      {{> register}}
+    {{/unless}}
   </div>
 
   <div id="sidr">
@@ -173,3 +183,26 @@
 
 
 </body>
+
+<template name="login">
+    <form id='login_form' class='hidden' action='action'>
+      <div>SIGN IN</div>
+      <div class='form_text'>EMAIL<input type='email' id='login_email' /></div> 
+      <div class='form_text'>PASSWORD<input type='password' id='login_password' /></div>
+      <input type='submit' id='login_button' value='Sign In' />
+      <div class='form_text2'>Don't have an account yet? Sign Up!</div>
+    </form>
+  </template>
+
+  <template name='register'>
+    <form id='register_form' class='hidden' action='action'>
+      <div>SIGN UP<br>
+        <span class='form_text'>EMAIL</span><input type='email' id='account_email' />
+        <span class='form_text'>PASSWORD</span><input type='password' id='account_password' />
+        <span class='form_text'>PASSWORD CONFIRMATION</span><input type='password' id='account_password_confirmation' />
+        <input type='submit' id='create_account' value='Create Your Account' />
+      </div>
+    </form>
+  </template>
+
+

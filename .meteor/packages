@@ -8,3 +8,6 @@ autopublish
 insecure
 jquery
 jqueryui
+accounts-ui
+accounts-password
+roles
