@@ -185,22 +185,23 @@
 </body>
 
 <template name="login">
-    <form id='login_form' class='hidden' action='action'>
+    <form id='login_form' action='action'>
       <div>SIGN IN</div>
       <div class='form_text'>EMAIL<input type='email' id='login_email' /></div> 
       <div class='form_text'>PASSWORD<input type='password' id='login_password' /></div>
       <input type='submit' id='login_button' value='Sign In' />
-      <div class='form_text2'>Don't have an account yet? Sign Up!</div>
+      <div class='form_text2'>Don't have an account yet? <span id='sign_up'>Sign Up!</span></div>
     </form>
   </template>
 
   <template name='register'>
-    <form id='register_form' class='hidden' action='action'>
+    <form id='register_form' action='action'>
       <div>SIGN UP<br>
         <span class='form_text'>EMAIL</span><input type='email' id='account_email' />
         <span class='form_text'>PASSWORD</span><input type='password' id='account_password' />
         <span class='form_text'>PASSWORD CONFIRMATION</span><input type='password' id='account_password_confirmation' />
         <input type='submit' id='create_account' value='Create Your Account' />
+        <div class='form_text2'>Already have an account? <span id='sign_in'>Sign In!</span></div>
       </div>
     </form>
   </template>

@@ -1,15 +1,4 @@
 if (Meteor.isClient) {
-  Template.hello.greeting = function () {
-    return "Welcome to medialab.";
-  };
-
-  Template.hello.events({
-    'click input': function () {
-      // template data, if any, is available in 'this'
-      if (typeof console !== 'undefined')
-        console.log("You pressed the button");
-    }
-  });
 
   Template.login.events({
     'submit #login_form' : function(e,t){
@@ -19,7 +8,7 @@ if (Meteor.isClient) {
 
       Meteor.loginWithPassword(email, password, function(err){
         if (err){
-          //TODO
+          console.log('error');
         }else{
           console.log("user logged in successfully");
         }
@@ -38,7 +27,7 @@ if (Meteor.isClient) {
 
       Accounts.createUser({email:email, password:password}, function(err){
         if (err){
-          //TODO
+          console.log(password);
         }else{
           console.log("user created successfully");
         }

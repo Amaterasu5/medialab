@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  $('#login_form').hide();
+  $('#register_form').hide();
+
   //Event handlers
 
   $('#select_area').mouseenter(function(){
@@ -40,7 +43,17 @@ $(document).ready(function(){
 
     $('.sign_in').click(function(){
       $('.fade2').removeClass('hidden',100);
-      $('#login_form').removeClass('hidden',100);
+      $('#login_form').show(100);
+    });
+
+    $('#sign_up').click(function(){
+      $('#login_form').hide();
+      $('#register_form').show(100);
+    });
+
+    $('#sign_in').click(function(){
+      $('#login_form').show(100);
+      $('#register_form').hide();
     });
 
   //Navbar dropdown
