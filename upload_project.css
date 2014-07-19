@@ -1,0 +1,27 @@
+#navbar3 {
+	color: #BEBEBE;
+	background-color:black;
+	width: 100%;
+	position: fixed;
+	height: 60px;
+	top: 0;
+	left: 0;
+}
+
+#navtext {
+	position: absolute;
+	width: 15%;
+	height: 40%;
+	bottom: 25%;
+	left:2%;
+	font-size: 11pt;
+}
+
+#form_container{
+	background-color: #BEBEBE;
+	z-index: 3000;
+}
+
+#form_container *{
+	z-index: 3000;
+}

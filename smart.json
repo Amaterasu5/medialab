@@ -1,6 +1,7 @@
 {
   "packages": {
     "jqueryui": {},
-    "roles": {}
+    "roles": {},
+    "iron-router": {}
   }
 }

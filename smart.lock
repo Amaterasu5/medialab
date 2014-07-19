@@ -3,23 +3,34 @@
   "dependencies": {
     "basePackages": {
       "jqueryui": {},
-      "roles": {}
+      "roles": {},
+      "iron-router": {}
     },
     "packages": {
       "jqueryui": {
         "git": "https://github.com/mizzao/meteor-jqueryui.git",
-        "tag": "v1.10.4",
-        "commit": "c75906fc9e1e19abf1ad5b2963925122ff8a0336"
+        "tag": "v1.11.0",
+        "commit": "06194edc0bdbb28c34b3a656bf9cb6a32718b44e"
       },
       "roles": {
         "git": "https://github.com/alanning/meteor-roles.git",
         "tag": "v1.2.10",
         "commit": "7ccb35de0a6cb0c9a0c3666badd04757e39c09a6"
       },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.7.1",
+        "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
       "build-fetcher": {
         "git": "https://github.com/mizzao/meteor-build-fetcher.git",
-        "tag": "v0.1.0",
-        "commit": "e3813b1fc7f5c576e8e1fa4c51ae6f4687780a35"
+        "tag": "v0.2.0",
+        "commit": "5202ca83277860d798c6ff2ef1d8fe1bce007d0f"
+      },
+      "blaze-layout": {
+        "git": "https://github.com/EventedMind/blaze-layout.git",
+        "tag": "v0.2.4",
+        "commit": "b40e9b0612329288d75cf52ad14a7da64bb8618f"
       }
     }
   }

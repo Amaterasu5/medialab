@@ -17,7 +17,12 @@
   <div id='navbar2'>
     <div class='icons'>
       <span class="subicons">
-        <a class='sign_in'>SIGN IN</a>
+        {{#unless currentUser}}
+          {{>signed_out}}
+        {{/unless}}
+        {{#if currentUser}}
+          {{>signed_in}}
+        {{/if}}
         <a><img src='/facebook-logo.png'></a>
         <a><img src='/twitter-logo.png'></a>
         <a class='email'><img src='/email-logo.png'></a>
@@ -32,10 +37,20 @@
       <span class="links">
         <a href='#section_three' id='slide_2'>MATERIAL FABRICATION</a>
         <a href='#section_three' id='slide_3'>ACTIVITIES</a>
-        <a class='sign_in'>SIGN IN</a>
+        {{#unless currentUser}}
+          {{>signed_out}}
+        {{/unless}}
+        {{#if currentUser}}
+          {{>signed_in}}
+        {{/if}}
       </span>
       <span class="subicons">
-        <a class='sign_in'>SIGN IN</a>
+        {{#unless currentUser}}
+          {{>signed_out}}
+        {{/unless}}
+        {{#if currentUser}}
+          {{>signed_in}}
+        {{/if}}
         <a class='fb'><img src='/facebook-logo.png'></a>
         <a><img src='/twitter-logo.png'></a>
         <a class='email'><img src='/email-logo.png'></a>
@@ -45,7 +60,7 @@
   </div>
 
   <div class='fade2 hidden'>
-    {{#unless Meteor.userId}}
+    {{#unless currentUser}}
       {{> login}}
       {{> register}}
     {{/unless}}
@@ -185,25 +200,32 @@
 </body>
 
 <template name="login">
-    <form id='login_form' action='action'>
-      <div>SIGN IN</div>
-      <div class='form_text'>EMAIL<input type='email' id='login_email' /></div> 
-      <div class='form_text'>PASSWORD<input type='password' id='login_password' /></div>
-      <input type='submit' id='login_button' value='Sign In' />
-      <div class='form_text2'>Don't have an account yet? <span id='sign_up'>Sign Up!</span></div>
-    </form>
-  </template>
+  <form id='login_form' action='action'>
+    <div>SIGN IN</div>
+    <div class='form_text'>EMAIL<input type='email' id='login_email' /></div> 
+    <div class='form_text'>PASSWORD<input type='password' id='login_password' /></div>
+    <input type='submit' id='login_button' value='Sign In' />
+    <div class='form_text2'>Don't have an account yet? <span id='sign_up'>Sign Up!</span></div>
+  </form>
+</template>
 
-  <template name='register'>
-    <form id='register_form' action='action'>
-      <div>SIGN UP<br>
-        <span class='form_text'>EMAIL</span><input type='email' id='account_email' />
-        <span class='form_text'>PASSWORD</span><input type='password' id='account_password' />
-        <span class='form_text'>PASSWORD CONFIRMATION</span><input type='password' id='account_password_confirmation' />
-        <input type='submit' id='create_account' value='Create Your Account' />
-        <div class='form_text2'>Already have an account? <span id='sign_in'>Sign In!</span></div>
-      </div>
-    </form>
-  </template>
+<template name='register'>
+  <form id='register_form' action='action'>
+    <div>SIGN UP<br>
+      <span class='form_text'>EMAIL</span><input type='email' id='account_email' />
+      <span class='form_text'>PASSWORD</span><input type='password' id='account_password' />
+      <span class='form_text'>PASSWORD CONFIRMATION</span><input type='password' id='account_password_confirmation' />
+      <input type='submit' id='create_account' value='Create Your Account' />
+      <div class='form_text2'>Already have an account? <span id='sign_in'>Sign In!</span></div>
+    </div>
+  </form>
+</template>
 
+<template name='signed_in'>
+  <a class='sign_out'>SIGN OUT</a>
+  <a id='upload'>Upload Project</a>
+</template>
 
+<template name='signed_out'>
+  <a class='sign_in'>SIGN IN</a>
+</template>

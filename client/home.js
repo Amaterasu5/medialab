@@ -44,6 +44,7 @@ $(document).ready(function(){
     $('.sign_in').click(function(){
       $('.fade2').removeClass('hidden',100);
       $('#login_form').show(100);
+      console.log('show');
     });
 
     $('#sign_up').click(function(){
@@ -54,6 +55,17 @@ $(document).ready(function(){
     $('#sign_in').click(function(){
       $('#login_form').show(100);
       $('#register_form').hide();
+    });
+
+    $(document).mouseup(function (e){
+      var container = $("#login_form");
+      var container2 = $('#register_form');
+      if (!container.is(e.target) && container.has(e.target).length === 0 && !container2.is(e.target) && container2.has(e.target).length === 0 && !$('.sign_in').is(e.target)){
+        $('.fade2').addClass("hidden");
+        container.hide();
+        container2.hide();
+        console.log('hiding');
+      }
     });
 
   //Navbar dropdown

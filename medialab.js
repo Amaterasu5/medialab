@@ -5,6 +5,7 @@ if (Meteor.isClient) {
       e.preventDefault();
       var email = t.find('#login_email').value;
       var password = t.find('#login_password').value;
+      $('.fade2').addClass('hidden');
 
       Meteor.loginWithPassword(email, password, function(err){
         if (err){
@@ -24,6 +25,7 @@ if (Meteor.isClient) {
       var temp_password = t.find('#account_password').value;
       var password_confirmation = t.find('#account_password_confirmation').value;
       var password = temp_password===password_confirmation ? temp_password : null;
+      $('.fade2').addClass('hidden');
 
       Accounts.createUser({email:email, password:password}, function(err){
         if (err){
@@ -33,6 +35,15 @@ if (Meteor.isClient) {
         }
       });
       return false;
+    }
+  });
+
+  Template.signed_in.events({
+    'click .sign_out' : function(e,t){
+      Meteor.logout();
+    },
+    'click #upload' : function(e,t){
+      Router.go('upload');
     }
   });
 
