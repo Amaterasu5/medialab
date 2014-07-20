@@ -1,8 +1,8 @@
 #navbar3 {
-	color: #BEBEBE;
+	color: #D0D0D0;
 	background-color:black;
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	height: 60px;
 	top: 0;
 	left: 0;
@@ -13,15 +13,98 @@
 	width: 15%;
 	height: 40%;
 	bottom: 25%;
-	left:2%;
+	left: 1%;
 	font-size: 11pt;
 }
 
 #form_container{
-	background-color: #BEBEBE;
-	z-index: 3000;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	background-color: #EEEEEE;
+	width: 100%;
+	font-size: 10pt;
+	text-align: left;
+	font-weight: 700;
 }
 
-#form_container *{
-	z-index: 3000;
+#updateForm *{
+	margin-left: 2%;
+}
+
+#uploadInput {
+	margin-top: 5px;
+}
+
+#form_choices {
+	margin-top: 5px;
+}
+
+#pic_holder{
+	width: 300px;
+	height: 300px;
+	background-color: gray;
+}
+
+.form_section {
+	padding-top: 30px;
+	margin-bottom: -3px;
+}
+
+.saveButton {
+	width: 10%;
+	margin-bottom: 10px;
+	margin-top: 8px;
+}
+
+.uploadInput {
+	width: 95%;
+	line-height: 3em;
+	font-size: 10pt;
+	margin-top: 1%;
+}
+
+#projectDescBox{
+	width: 95%;
+	height: 50%;
+	font-size: 10pt;
+	margin-top: 1%;
+}
+
+#dropzone{
+	font-style: underline;
+}
+
+
+/* style placeholders */
+*::-webkit-input-placeholder {
+    color: black;
+    padding-left: 2%;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: black;
+    padding-left: 2%;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: black;
+    padding-left: 2%;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: black;
+    padding-left: 2%;
+}
+#projectDescBox::-webkit-input-placeholder {
+	padding-top: 1.2%;
+}
+#projectDescBox:-moz-placeholder {
+    padding-top: 1.2%;
+}
+#projectDescBox::-moz-placeholder {
+    padding-top: 1.2%;
+}
+#projectDescBox:-ms-input-placeholder {
+    padding-top: 1.2%;
 }

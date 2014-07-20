@@ -5,20 +5,31 @@
 	</div>
 	<div id='form_container'>
 
-		<form>
-			<button type='submit'>Save</button>
-			<input type='text' placeholder='Title'>
-			<input type='text' placeholder="Creator's names">
-			<input type='text' placeholder='Affiliation(s)'>
-			<input type="Project Description">
-			<textarea placeholder='Project Description'></textarea>
-			<input type='text' placeholder='Enter External URL for "Research background project" if there is one'>
-			<input type='text' placeholder='Enter keywords to search relevant "Material fabrication" page in our database if there are any'>
-			<div>Embed Video by Entering External URL:</div>
-			<input type='text'>
+		<form id='updateForm'>
 			<br>
-			<div>Upload Images:</div>
-			<button type='submit'></button>
+			<div id='form_choices'>Upload Project</div>
+			<button class='saveButton' type='submit'>Save</button>
+			<br>
+			<hr>
+			<div>Project Details:</div>
+			<div>Thumb<input type='file' id='uploadButton'>
+			</div>
+			<div id='pic_holder'></div>
+			<div>***To enter multiple, separate entries by comma.***</div>
+			<input class='uploadInput' type='text' placeholder='Title'>
+			<input class='uploadInput' type='text' placeholder="Creator's names">
+			<input class='uploadInput' type='text' placeholder='Affiliation(s)'>
+			<textarea rows='12' form='updateForm' id='projectDescBox' placeholder='Project Description'></textarea>
+			<input class='uploadInput' type='text' placeholder='Enter External URL for "Research background project" if there is one'>
+			<input class='uploadInput' type='text' placeholder='Enter keywords to search relevant "Material fabrication" page in our database if there are any'>
+			<div class='form_section'>Embed Video by Entering External URL:</div>
+			<input class='uploadInput' type='text'>
+			<br>
+			<div class='form_section'>Upload Images:</div>
+			<input class='uploadInput' type='text' placeholder='Enter Flikr URL(s)'>
+			<div>OR</div>
+			<div id='dropzone'>Select Image File(s)</div>
+			<button class='saveButton' type='submit'>Save</button>
 		</form>
 	</div>
 </template>

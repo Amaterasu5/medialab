@@ -47,6 +47,14 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.currentDisplay.homePage = function(){
+    return Session.get('currentPage') == 'homePage';
+  }
+
+  Template.currentDisplay.uploadPage = function(){
+    return Session.get('currentPage') == 'uploadPage';
+  }
+
 }
 
 if (Meteor.isServer) {
