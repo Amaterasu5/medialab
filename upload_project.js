@@ -26,23 +26,37 @@ if (Meteor.isClient){
   			reader.readAsDataURL(file);
   			return false;
 		},
-		'submit #updateForm':function(){
+		'submit #updateForm':function(e,t){
+			e.preventDefault();
+			var imageurls = myDropzone.files;
+			console.log(imageurls);
+			for (file in imageurls){
+
+			}
 
 			Projects.insert({
 				thumb:document.getElementByTagName('input')[0],
 				title:document.getElementByTagName('input')[1],
-				creators:document.getElementByTagName('input')[2],
-				affiliations: document.getElementByTagName('input')[3],
+				creators:document.getElementByTagName('input')[2].split(','),
+				affiliations: document.getElementByTagName('input')[3].split(','),
 				projectdesc:document.getElementByTagName('textarea')[0],
 				researchurl:document.getElementByTagName('input')[4],
-				keywords:document.getElementByTagName('input')[5],
+				keywords:document.getElementByTagName('input')[5].split(','),
 				videourl:document.getElementByTagName('input')[6],
 				imageurls:document.getElementByTagName('input')[7]
-			})
+			});
+
+			return false;
 		}
 	});
-	var myDropzone = new Dropzone("div#dropzone", { url: "/file/post"});
-	myDropzone.on('addedfile',function(){
-		alert("file successfully uploaded");
-	});
+	Template.upload.rendered = function(){
+		var myDropzone = new Dropzone("#dropzone",{
+    		url: "/upload",
+    		addRemoveLinks: true,
+    		autoProcessQueue: true,
+    		uploadMultiple: true,
+    		clickable: true,
+    		autoDiscover: true,
+    	});
+	}
 }

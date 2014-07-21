@@ -64,7 +64,6 @@ $(document).ready(function(){
         $('.fade2').addClass("hidden");
         container.hide();
         container2.hide();
-        console.log('hiding');
       }
     });
 
