@@ -95,6 +95,7 @@
 #dropzone span{
 	text-decoration: underline;
 	vertical-align: middle;
+	pointer-events:none;
 }
 
 /* style placeholders */

@@ -31,19 +31,23 @@ if (Meteor.isClient){
 			var imageurls = myDropzone.files;
 			console.log(imageurls);
 			for (file in imageurls){
-
+				$.ajax({
+					url:'https://up.flickr.com/services/upload/',
+					method:'POST',
+					
+				})
 			}
 
 			Projects.insert({
-				thumb:document.getElementByTagName('input')[0],
-				title:document.getElementByTagName('input')[1],
-				creators:document.getElementByTagName('input')[2].split(','),
-				affiliations: document.getElementByTagName('input')[3].split(','),
-				projectdesc:document.getElementByTagName('textarea')[0],
-				researchurl:document.getElementByTagName('input')[4],
-				keywords:document.getElementByTagName('input')[5].split(','),
-				videourl:document.getElementByTagName('input')[6],
-				imageurls:document.getElementByTagName('input')[7]
+				thumb:document.getElementsByTagName('input')[0],
+				title:document.getElementsByTagName('input')[1],
+				creators:document.getElementsByTagName('input')[2].split(','),
+				affiliations: document.getElementsByTagName('input')[3].split(','),
+				projectdesc:document.getElementsByTagName('textarea')[0],
+				researchurl:document.getElementsByTagName('input')[4],
+				keywords:document.getElementsByTagName('input')[5].split(','),
+				videourl:document.getElementsByTagName('input')[6],
+				imageurls:document.getElementsByTagName('input')[7]
 			});
 
 			return false;
@@ -57,6 +61,12 @@ if (Meteor.isClient){
     		uploadMultiple: true,
     		clickable: true,
     		autoDiscover: true,
+    		init:function(){
+    			Dropzone.files=[];
+    		}
+    	});
+    	myDropzone.on('addedfile',function(file){
+    		Dropzone.files.push(file);
     	});
 	}
 }
