@@ -1,4 +1,14 @@
 if (Meteor.isClient) {
+  Meteor.startup(function(){
+    oauth = OAuth({
+      consumer: {
+        public: '31423d6a70fd9a88ffccaa8c71521b06',
+        secret: 'a0f7884ef8d694f7'
+      },
+      signature_method: 'HMAC-SHA1'
+    });
+    
+  });
 
   Template.login.events({
     'submit #login_form' : function(e,t){

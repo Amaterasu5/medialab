@@ -28,14 +28,29 @@ if (Meteor.isClient){
 		},
 		'submit #updateForm':function(e,t){
 			e.preventDefault();
+			var dropimages = [];
 			var imageurls = myDropzone.files;
 			console.log(imageurls);
 			for (file in imageurls){
+				var picture = {
+					data: {
+						photo:file
+					}
+				}
+
+				var token = {
+      				public: '31423d6a70fd9a88ffccaa8c71521b06',
+      				secret: 'a0f7884ef8d694f7'
+				}
+
 				$.ajax({
 					url:'https://up.flickr.com/services/upload/',
-					method:'POST',
-					
-				})
+					type:'POST',
+					data: oauth.authorize(picture,token)
+				}).done(function(data){
+					var photo_url='https://www.flickr.com/photos/tangible_media/'+data.url;
+					dropimages.push(photo_url);
+				});
 			}
 
 			Projects.insert({
@@ -47,7 +62,9 @@ if (Meteor.isClient){
 				researchurl:document.getElementsByTagName('input')[4],
 				keywords:document.getElementsByTagName('input')[5].split(','),
 				videourl:document.getElementsByTagName('input')[6],
-				imageurls:document.getElementsByTagName('input')[7]
+				imageurls:dropimages+document.getElementsByTagName('input')[7]
+			},function(err,id){
+				console.log('err');
 			});
 
 			return false;
